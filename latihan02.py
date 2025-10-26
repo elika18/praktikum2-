@@ -1,15 +1,24 @@
-import random
+# Program Mengurutkan Data
 
-# Input jumlah bilangan
-n = int(input("Masukkan jumlah n: "))
+# Input jumlah data (minimal 3)
+n = int(input("Masukkan jumlah data (minimal 3): "))
 
-count = 0  # penghitung jumlah bilangan yang sudah ditampilkan
+if n < 3:
+    print("Jumlah data minimal 3!")
+else:
+    data = []
+    for i in range(n):
+        bil = int(input(f"Bilangan ke-{i+1}: "))
+        data.append(bil)
 
-# Perulangan utama menggunakan while
-while count < n:
-    # di setiap iterasi while, kita hasilkan 1 bilangan acak dengan for
-    for i in range(1):  # bisa juga pakai for i in range(1) hanya untuk contoh kombinasi
-        bil = random.random()  # menghasilkan bilangan acak antara 0.0–1.0
-        if bil < 0.5:
-            print(bil)
-            count += 1
+    # Mengurutkan data dari kecil ke besar
+    for i in range(len(data)):
+        for j in range(i+1, len(data)):
+            if data[i] > data[j]:
+                # Tukar posisi
+                data[i], data[j] = data[j], data[i]
+
+    # Tampilkan hasil
+    print("Urutan bilangan:", end=" ")
+    for bil in data:
+        print(bil, end=" ")
