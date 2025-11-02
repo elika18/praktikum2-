@@ -6,6 +6,7 @@ Repository ini berisi latihan untuk praktikum ke-2 mata kuliah Pengantar Pemrogr
 - **Perulangan (for, while, nested loop)**
 
 ---
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/674fd7ec-254d-4e82-8cfc-30701031e971" />
 
 ##  Struktur Folder
 
